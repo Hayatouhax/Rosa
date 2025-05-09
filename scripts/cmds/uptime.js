@@ -6,7 +6,7 @@ module.exports = {
         name: "uptime",
         aliases: ["upt", "up"],
         version: "1.0",
-        author: "ミ★𝐒𝐎𝐍𝐈𝐂✄𝐄𝐗𝐄 3.0★彡", // don't change credits 
+        author: "HARUKI KUN", // don't change credits 
         role: 0,
         shortDescription: {
             en: "Displays bot uptime, system information, and current time in Cameroon."
@@ -81,7 +81,7 @@ module.exports = {
                 sendLoadingMessage(0, () => {
                     api.sendMessage("✅| 𝑆𝑢𝑐𝑐𝑒𝑠𝑠𝑓𝑢𝑙𝑙𝑦", event.threadID, () => {
                         api.sendMessage(
-                            `♡   ∩_∩\n（„• ֊ •„)♡\n╭∪∪─⌾🌿𝗛𝗘𝗗𝗚𝗘𝗛𝗢𝗚🌿\n│𝐍𝐚𝐦𝐞:➣ ✘.𝚂𝙾𝙽𝙸𝙲〈 な\n│𝐏𝐫𝐞𝐟𝐢𝐱 𝐒𝐲𝐬𝐭𝐞𝐦: ${prefix}\n│𝐎𝐰𝐧𝐞𝐫:ミ𝐒𝐎𝐍𝐈𝐂✄𝐄𝐗𝐄彡\n╰─────────⌾\n╭─⌾⏰𝗕𝗢𝗧 𝗨𝗣𝗧𝗜𝗠𝗘⏰ ${botUptimeString}\n╰─────────⌾\n╭─⌾⏰𝗦𝗘𝗥𝗩𝗘𝗥 𝗨𝗣𝗧𝗜𝗠𝗘⏰\n${serverUptimeString}\n╰─────────⌾\n╭─⌾🟢𝗖𝗔𝗣𝗔𝗖𝗜𝗧𝗬🟢\n│𝐒𝐩𝐞𝐞𝐝📶: ${speed} ko/s\n│𝐒𝐭𝐨𝐜𝐤𝐚𝐠𝐞💽: ${usedStorage.toFixed(2)}/${totalStorage.toFixed(2)} GB\n│𝐑𝐀𝐌💾: ${usedMem.toFixed(2)}/${totalMem.toFixed(2)} GB\n│${systemStatus}\n╰────────⌾\n╭─⌾📅🕰️ 𝐓𝐢𝐦𝐞 🕰️📅\n│${currentTime}\n╰─────────⌾`,
+                            `♡   ∩_∩\n（„• ֊ •„)♡\n╭∪∪─⌾📅 ROSA-AI\n│𝐍𝐚𝐦𝐞:➣ ROSA〈 \n│𝐏𝐫𝐞𝐟𝐢𝐱 𝐒𝐲𝐬𝐭𝐞𝐦: ${prefix}\n│𝐎𝐰𝐧𝐞𝐫:HARUKI KUN\n╰─────────⌾\n╭─⌾⏰𝗕𝗢𝗧 𝗨𝗣𝗧𝗜𝗠𝗘⏰ ${botUptimeString}\n╰─────────⌾\n╭─⌾⏰𝗦𝗘𝗥𝗩𝗘𝗥 𝗨𝗣𝗧𝗜𝗠𝗘⏰\n${serverUptimeString}\n╰─────────⌾\n╭─⌾🟢𝗖𝗔𝗣𝗔𝗖𝗜𝗧𝗬🟢\n│𝐒𝐩𝐞𝐞𝐝📶: ${speed} ko/s\n│𝐒𝐭𝐨𝐜𝐤𝐚𝐠𝐞💽: ${usedStorage.toFixed(2)}/${totalStorage.toFixed(2)} GB\n│𝐑𝐀𝐌💾: ${usedMem.toFixed(2)}/${totalMem.toFixed(2)} GB\n│${systemStatus}\n╰────────⌾\n╭─⌾📅🕰️ 𝐓𝐢𝐦𝐞 🕰️📅\n│${currentTime}\n╰─────────⌾`,
                             event.threadID
                         );
                     });
@@ -92,7 +92,7 @@ module.exports = {
             console.error(error);
             api.sendMessage(`🔴| 𝐁𝐚𝐝 𝐒𝐲𝐬𝐭𝐞𝐦: An error occurred while retrieving data. ${error.message}`, event.threadID);
 
-            if (module.exports.config.author !== "ミ★𝐒𝐎𝐍𝐈𝐂✄𝐄𝐗𝐄 3.0★彡") {
+            if (module.exports.config.author !== "HARUKI KUN") {
                 return api.sendMessage("❌| 𝐓𝐚𝐧𝐭 𝐪𝐮𝐞 𝐯𝐨𝐮𝐬 𝐧'𝐚𝐮𝐫𝐞𝐳 𝐩𝐚𝐬 𝐫𝐞𝐦𝐢𝐬 𝐥𝐞 𝐧𝐨𝐦 𝐝𝐮 𝐜𝐫𝐞𝐚𝐭𝐞𝐮𝐫 𝐝𝐞 𝐜𝐞𝐭𝐭𝐞 𝐜𝐨𝐦𝐦𝐚𝐧𝐝𝐞...𝐜𝐞𝐥𝐥𝐞-𝐜𝐢 𝐜𝐞𝐬𝐬𝐞𝐫𝐚 𝐝𝐞 𝐟𝐨𝐧𝐜𝐭𝐢𝐨𝐧𝐧𝐞𝐫 !🛠️⚙️", event.threadID);
             }
         }
