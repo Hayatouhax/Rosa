@@ -3,7 +3,7 @@ const axios = require("axios");
 const path = require("path");
 const { getPrefix } = global.utils;
 const { commands, aliases } = global.GoatBot;
-const doNotDelete = "🌍| 𝐇𝐞𝐝𝐠𝐞𝐡𝐨𝐠-𝐁𝐨𝐭-𝐕2"; // changing this wont change the goatbot V2 of list cmd it is just a decoyy
+const doNotDelete = "🔮| HARUKI-BOT 🔒"; // changing this wont change the goatbot V2 of list cmd it is just a decoyy
 
 module.exports = {
   config: {
@@ -32,7 +32,7 @@ module.exports = {
 
     if (args.length === 0) {
       const categories = {};
-      let msg = "╭──────🦔\n│➣ ✘.𝚂𝙾𝙽𝙸𝙲〈 な\n╰──────────────🦔\n";
+      let msg = "╭──────🦔\n│《✾ 𝚁𝙾𝚂𝙰 ✾》\n╰──────────────🦔\n";
 
       msg += `━━━━━━━━━━━━━━━━\n`; // replace with your name 
 
@@ -51,7 +51,7 @@ module.exports = {
 
           const names = categories[category].commands.sort();
           for (let i = 0; i < names.length; i += 3) {
-            const cmds = names.slice(i, i + 3).map((item) => `│  🌿 ✘.${item}—シ🌿\n`);
+            const cmds = names.slice(i, i + 3).map((item) => `│  დ ✘.${item}—დ\n`);
             msg += ` ${cmds.join(" ".repeat(Math.max(1, 10 - cmds.join("").length)))}`;
           }
 
@@ -60,9 +60,9 @@ module.exports = {
       });
 
       const totalCommands = commands.size;
-      msg += `𝐀𝐜𝐭𝐮𝐞𝐥𝐥𝐞𝐦𝐞𝐧𝐭 𝐥𝐞 𝐇𝐞𝐝𝐠𝐞𝐡𝐨𝐠𝐛𝐨𝐭 𝐝𝐢𝐬𝐩𝐨𝐬𝐞 𝐝𝐞 🎶${totalCommands}𝐜𝐨𝐦𝐦𝐚𝐧𝐝𝐞𝐬🎶\n`;
+      msg += `𝐀𝐜𝐭𝐮𝐞𝐥𝐥𝐞𝐦𝐞𝐧𝐭 ROSA 𝐝𝐢𝐬𝐩𝐨𝐬𝐞 𝐝𝐞 🎶${totalCommands}𝐜𝐨𝐦𝐦𝐚𝐧𝐝𝐞𝐬🎶\n`;
       msg += `𝐒𝐚𝐢𝐬𝐢𝐬 ${prefix}𝐡𝐞𝐥𝐩 𝐬𝐮𝐢𝐯𝐢 𝐝𝐮 𝐧𝐨𝐦 𝐝𝐞 𝐥𝐚 𝐜𝐨𝐦𝐦𝐚𝐧𝐝𝐞 𝐩𝐨𝐮𝐫 𝐚𝐯𝐨𝐢𝐫 𝐩𝐥𝐮𝐬 𝐝𝐞 𝐝𝐞𝐭𝐚𝐢𝐥𝐬 𝐬𝐮𝐫 𝐥𝐚 𝐜𝐨𝐦𝐦𝐚𝐧𝐝𝐞\n━━━━━━━━━━━━━━━\n`;
-      msg += `╭───────⌾\n│📣...|\n│➣ ✘.𝚂𝙾𝙽𝙸𝙲〈 な\n│🌿| 𝐎𝐰𝐧𝐞𝐫 : \n│ミ★𝐒𝐎𝐍𝐈𝐂✄𝐄𝐗𝐄 3.0★彡\n│🌪| 𝐋𝐢𝐧𝐤'𝐬 𝐅𝐚𝐜𝐞𝐛𝐨𝐨𝐤 :\n│ https://facebook.com/hentai.san.1492\n╰──────────────⌾`; // its not decoy so change it if you want 
+      msg += `╭───────⌾\n│📣...|\n│➣ R-OSA〈 \n│🤍| 𝐎𝐰𝐧𝐞𝐫 : \n│HARUKI KUN\n│🌪| 𝐋𝐢𝐧𝐤'𝐬 𝐅𝐚𝐜𝐞𝐛𝐨𝐨𝐤 :\n│ https://facebook.com/61573015634696\n╰──────────────⌾`; // its not decoy so change it if you want 
 
       const helpListImages = [
 "https://i.ibb.co/TcGjWrp/image.gif",
