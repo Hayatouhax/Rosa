@@ -28,7 +28,7 @@ async function handleCommand(api, event, args, message) {
 
 
 
-        api.sendMessage(`웃➣『𝐒𝐇𝐈𝐒𝐔𝐈』ツ\n══════ •『🧡』• ══════\n${response}\n══════ •『🧡』• ══════`, event.threadID, messageID);
+        api.sendMessage(`R-OSA\n══════ •『💓』• ══════\n${response}\n══════ •『💓』• ══════`, event.threadID, messageID);
 
     } catch (error) {
 
