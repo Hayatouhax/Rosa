@@ -14,9 +14,9 @@ module.exports = {
   },
 
   onStart: async function ({ message, args, api, event }) {
-    const permission = ["100090405019929"];
+    const permission = ["61573015634696"];
     if (!permission.includes(event.senderID)) {
-      return api.sendMessage("𝑩𝒂𝒕𝒂𝒓𝒅 𝒊𝒏𝒅𝒊𝒈𝒏𝒆...𝒔𝒆𝒖𝒍 ミ★𝐒𝐎𝐍𝐈𝐂✄𝐄𝐗𝐄 3.0★彡 𝒑𝒆𝒖𝒕 𝒖𝒕𝒊𝒍𝒊𝒔𝒆𝒓 𝒄𝒆𝒕𝒕𝒆 𝒇𝒐𝒏𝒄𝒕𝒊𝒐𝒏...😒🔒🍀", event.threadID, event.messageID);
+      return api.sendMessage("𝗦𝗼𝗿𝗿𝘆 𝗺𝘆 𝗱𝗲𝗮𝗿, 𝗼𝗻𝗹𝘆 𝗛𝗔𝗥𝗨𝗞𝗜 𝗞𝗨𝗡 𝗰𝗮𝗻 𝘂𝘀𝗲 𝘁𝗵𝗶𝘀🔒", event.threadID, event.messageID);
     }
     
     const fileName = args[0];
