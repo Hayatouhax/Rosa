@@ -23,16 +23,16 @@ module.exports = {
   },
   onStart: async function ({ api, event }) {
       try {
-        const loadingMessage = "⏳| 𝑳𝒐𝒂𝒅𝒊𝒏𝒈 𝒐𝒇 𝒊𝒏𝒇𝒐𝒓𝒎𝒂𝒕𝒊𝒐𝒏 𝒐𝒇 𝒎𝒚 𝒐𝒘𝒏𝒆𝒓...𝒑𝒍𝒆𝒂𝒔𝒆 𝒘𝒂𝒊𝒕 ";
+        const loadingMessage = "⏳| 𝑳𝒐𝒂𝒅𝒊𝒏𝒈 𝒊𝒏𝒇𝒐𝒓𝒎𝒂𝒕𝒊𝒐𝒏 𝒐𝒇 𝒎𝒚 𝒐𝒘𝒏𝒆𝒓...𝒑𝒍𝒆𝒂𝒔𝒆 𝒘𝒂𝒊𝒕 ";
         await api.sendMessage(loadingMessage, event.threadID);
 
         const ownerInfo = {
-          name: 'ミ★𝐒𝐎𝐍𝐈𝐂✄𝐄𝐗𝐄 3.0★彡',
-          gender: '𝗕𝗢𝗬♂️',
+          name: 'HARUKI KUN',
+          gender: '𝗕𝗢𝗬 🧍🏼‍♂️',
           hobby: '𝐅𝐨𝐨𝐭𝐛𝐚𝐥𝐥⚽',
-          relationship: '𝐄𝐧 𝐜𝐨𝐮𝐩𝐥𝐞❤✨🎀 𝐚𝐯𝐞𝐜 𝐌𝐀𝐑𝐈𝐀𝐌 𝐊𝐎𝐍𝐄🌿❤🍀',
-          facebookLink: 'https://www.facebook.com/hentai.san.1492',
-          bio: '🚀| 𝑷𝑹𝑶𝑱𝑬𝑪𝑻 𝑯𝑬𝑫𝑮𝑬𝑯𝑶𝑮 𝑮𝑷𝑻 🦔🤖'
+          relationship: '𝐄𝐧 𝐜𝐨𝐮𝐩𝐥𝐞❤✨ Avec son diamant 🤍',
+          facebookLink: 'https://www.facebook.com/61573015634696',
+          bio: '🚀| Kinama |🤍🤖'
         };
 
         const videoUrl = 
