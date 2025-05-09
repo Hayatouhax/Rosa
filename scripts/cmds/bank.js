@@ -39,19 +39,19 @@ module.exports = {
   const depositAmount = parseInt(args[2]);
 
   if (!depositPassword || !depositAmount) {
-    return message.reply("==[🏦 𝐔𝐂𝐇𝐈𝐖𝐀 𝐁𝐀𝐍𝐊 🏦]==\n━━━━━━━━━━━━━━━━\n✧Please provide both a password and a valid amount for deposit.🔑\n\nIf you don't set your password then set by -bank setpassword (password)\n\nExample: -bank deposit (your_password) (your_amount)");
+    return message.reply("==[🏦 𝗥𝗢𝗦𝗔 𝗕𝗔𝗡𝗞 🏦]==\n━━━━━━━━━━━━━━━━\n✧Please provide both a password and a valid amount for deposit.🔑\n\nIf you don't set your password then set by -bank setpassword (password)\n\nExample: -bank deposit (your_password) (your_amount)");
   }
 
   if (bankData[user].password !== depositPassword) {
-    return message.reply("==[🏦 𝐔𝐂𝐇𝐈𝐖𝐀 𝐁𝐀𝐍𝐊 🏦]==\n━━━━━━━━━━━━━━━━\n✧Incorrect password. Please try again.🔑");
+    return message.reply("==[🏦 𝗥𝗢𝗦𝗔 𝗕𝗔𝗡𝗞 🏦]==\n━━━━━━━━━━━━━━━━\n✧Incorrect password. Please try again.🔑");
   }
 
   if (isNaN(depositAmount) || depositAmount <= 0) {
-    return message.reply("==[🏦 𝐔𝐂𝐇𝐈𝐖𝐀 𝐁𝐀𝐍𝐊 🏦]==\n━━━━━━━━━━━━━━━━\n✧Please enter a valid deposit amount.💸");
+    return message.reply("==[🏦 𝗥𝗢𝗦𝗔 𝗕𝗔𝗡𝗞 🏦]==\n━━━━━━━━━━━━━━━━\n✧Please enter a valid deposit amount.💸");
   }
 
   if (userMoney < depositAmount) {
-    return message.reply("==[🏦 𝐔𝐂𝐇𝐈𝐖𝐀 𝐁𝐀𝐍𝐊 🏦]==\n━━━━━━━━━━━━━━━━\n✧You don't have the required amount✖");
+    return message.reply("==[🏦 𝗥𝗢𝗦𝗔 𝗕𝗔𝗡𝗞 🏦]==\n━━━━━━━━━━━━━━━━\n✧You don't have the required amount✖");
   }
 
   bankData[user].bank += depositAmount;
@@ -60,7 +60,7 @@ module.exports = {
   });
   fs.writeFileSync("./bank.json", JSON.stringify(bankData));
 
-  return message.reply(`==[🏦 𝐔𝐂𝐇𝐈𝐖𝐀 𝐁𝐀𝐍𝐊 🏦]==\n━━━━━━━━━━━━━━━━\n✧Successfully deposited ${depositAmount}$ into your bank account.`);
+  return message.reply(`==[🏦 𝗥𝗢𝗦𝗔 𝗕𝗔𝗡𝗞 🏦]==\n━━━━━━━━━━━━━━━━\n✧Successfully deposited ${depositAmount}$ into your bank account.`);
 
 
       case "withdraw":
@@ -68,21 +68,21 @@ module.exports = {
   const withdrawAmount = parseInt(args[2]); 
 
   if (!withdrawPassword || !withdrawAmount) {
-    return message.reply("==[🏦 𝐔𝐂𝐇𝐈𝐖𝐀 𝐁𝐀𝐍𝐊 🏦]==\n━━━━━━━━━━━━━━━━\n✧Please provide both a password and a valid amount for withdrawal.🔑\n\nIf you don't set your password then set by -bank setpassword (password)\n\nExample: -bank withdraw (your_password) (your_amount)");
+    return message.reply("==[🏦 𝗥𝗢𝗦𝗔 𝗕𝗔𝗡𝗞 🏦]==\n━━━━━━━━━━━━━━━━\n✧Please provide both a password and a valid amount for withdrawal.🔑\n\nIf you don't set your password then set by -bank setpassword (password)\n\nExample: -bank withdraw (your_password) (your_amount)");
   }
 
   if (bankData[user].password !== withdrawPassword) {
-    return message.reply("==[🏦 𝐔𝐂𝐇𝐈𝐖𝐀 𝐁𝐀𝐍𝐊 🏦]==\n━━━━━━━━━━━━━━━━\n✧Incorrect password. Please try again.🔑");
+    return message.reply("==[🏦 𝗥𝗢𝗦𝗔 𝗕𝗔𝗡𝗞 🏦]==\n━━━━━━━━━━━━━━━━\n✧Incorrect password. Please try again.🔑");
   }
 
   const balance = bankData[user].bank || 0;
 
   if (isNaN(withdrawAmount) || withdrawAmount <= 0) {
-    return message.reply("==[🏦 𝐔𝐂𝐇𝐈𝐖𝐀 𝐁𝐀𝐍𝐊 🏦]==\n━━━━━━━━━━━━━━━━\n✧Please enter a valid withdrawal amount.💸");
+    return message.reply("==[🏦 𝗥𝗢𝗦𝗔 𝗕𝗔𝗡𝗞 🏦]==\n━━━━━━━━━━━━━━━━\n✧Please enter a valid withdrawal amount.💸");
   }
 
   if (withdrawAmount > balance) {
-    return message.reply("==[🏦 𝐔𝐂𝐇𝐈𝐖𝐀 𝐁𝐀𝐍𝐊 🏦]==\n━━━━━━━━━━━━━━━━\n✧The requested amount is greater than the available balance in your bank account.👽");
+    return message.reply("==[🏦 𝗥𝗢𝗦𝗔 𝗕𝗔𝗡𝗞 🏦]==\n━━━━━━━━━━━━━━━━\n✧The requested amount is greater than the available balance in your bank account.👽");
   }
 
   bankData[user].bank = balance - withdrawAmount;
@@ -91,13 +91,13 @@ module.exports = {
   });
   fs.writeFileSync("./bank.json", JSON.stringify(bankData));
 
-  return message.reply(`==[🏦 𝐔𝐂𝐇𝐈𝐖𝐀 𝐁𝐀𝐍𝐊 🏦]==\n━━━━━━━━━━━━━━━━\n✧Successfully withdrew ${withdrawAmount}$ from your bank account.`);
+  return message.reply(`==[🏦 𝗥𝗢𝗦𝗔 𝗕𝗔𝗡𝗞 🏦]==\n━━━━━━━━━━━━━━━━\n✧Successfully withdrew ${withdrawAmount}$ from your bank account.`);
 
         case "hrinvest":
   const investmentAmount = parseInt(args[1]);
 
   if (isNaN(investmentAmount) || investmentAmount <= 0) {
-    return message.reply("==[🏦 𝐔𝐂𝐇𝐈𝐖𝐀 𝐁𝐀𝐍𝐊 🏦]==\n━━━━━━━━━━━━━━━━\n✧Please enter a valid investment amount.💸");
+    return message.reply("==[🏦 𝗥𝗢𝗦𝗔 𝗕𝗔𝗡𝗞 🏦]==\n━━━━━━━━━━━━━━━━\n✧Please enter a valid investment amount.💸");
   }
 
   const riskOutcome = Math.random() < 0.7; 
@@ -106,11 +106,11 @@ module.exports = {
   if (riskOutcome) {
     bankData[user].bank -= investmentAmount;
     fs.writeFileSync("./bank.json", JSON.stringify(bankData));
-    return message.reply(`==[🏦 𝐔𝐂𝐇𝐈𝐖𝐀 𝐁𝐀𝐍𝐊 🏦]==\n━━━━━━━━━━━━━━━━\n✧Your high-risk investment of ${investmentAmount}$ was risky, and you lost your money. 😔`);
+    return message.reply(`==[🏦 𝗥𝗢𝗦𝗔 𝗕𝗔𝗡𝗞 🏦]==\n━━━━━━━━━━━━━━━━\n✧Your high-risk investment of ${investmentAmount}$ was risky, and you lost your money. 😔`);
   } else {
     bankData[user].bank += potentialReturns;
     fs.writeFileSync("./bank.json", JSON.stringify(bankData));
-    return message.reply(`==[🏦 𝐔𝐂𝐇𝐈𝐖𝐀 𝐁𝐀𝐍𝐊 🏦]==\n━━━━━━━━━━━━━━━━\n✧Congratulations! Your high-risk investment of ${investmentAmount}$ paid off, and you earned ${potentialReturns}$ in returns! 🎉`);
+    return message.reply(`==[🏦 𝗥𝗢𝗦𝗔 𝗕𝗔𝗡𝗞 🏦]==\n━━━━━━━━━━━━━━━━\n✧Congratulations! Your high-risk investment of ${investmentAmount}$ paid off, and you earned ${potentialReturns}$ in returns! 🎉`);
   }
         case "gamble":
   // Vérifie si l'utilisateur atteint automatiquement le statut VIP
@@ -125,7 +125,7 @@ module.exports = {
   // Vérifie si l'utilisateur est VIP
   if (bankData[user].role !== "VIP") {
     return message.reply(
-      "==[🏦 𝐔𝐂𝐇𝐈𝐖𝐀 𝐁𝐀𝐍𝐊 🏦]==\n━━━━━━━━━━━━━━━━\n✧ Only VIP users can access the 'gamble' feature.\n✧ Reach a bank balance of 100,000,000,000$ to unlock VIP status. 👑"
+      "==[🏦 𝗥𝗢𝗦𝗔 𝗕𝗔𝗡𝗞 🏦]==\n━━━━━━━━━━━━━━━━\n✧ Only VIP users can access the 'gamble' feature.\n✧ Reach a bank balance of 100,000,000,000$ to unlock VIP status. 👑"
     );
   }
 
@@ -134,14 +134,14 @@ module.exports = {
   // Vérifie si le montant du pari est valide
   if (isNaN(betAmount) || betAmount <= 0) {
     return message.reply(
-      "==[🏦 𝐔𝐂𝐇𝐈𝐖𝐀 𝐁𝐀𝐍𝐊 🏦]==\n━━━━━━━━━━━━━━━━\n✧ Please enter a valid amount to bet.💸"
+      "==[🏦 𝗥𝗢𝗦𝗔 𝗕𝗔𝗡𝗞 🏦]==\n━━━━━━━━━━━━━━━━\n✧ Please enter a valid amount to bet.💸"
     );
   }
 
   // Vérifie si l'utilisateur a suffisamment d'argent pour parier
   if (userMoney < betAmount) {
     return message.reply(
-      "==[🏦 𝐔𝐂𝐇𝐈𝐖𝐀 𝐁𝐀𝐍𝐊 🏦]==\n━━━━━━━━━━━━━━━━\n✧ You don't have enough money to place that bet. 🙅‍♂"
+      "==[🏦 𝗥𝗢𝗦𝗔 𝗕𝗔𝗡𝗞 🏦]==\n━━━━━━━━━━━━━━━━\n✧ You don't have enough money to place that bet. 🙅‍♂"
     );
   }
 
@@ -155,7 +155,7 @@ module.exports = {
     });
     fs.writeFileSync("./bank.json", JSON.stringify(bankData));
     return message.reply(
-      `==[🏦 𝐔𝐂𝐇𝐈𝐖𝐀 𝐁𝐀𝐍𝐊 🏦]==\n━━━━━━━━━━━━━━━━\n✧ Congratulations! You've won ${winnings}$! 🎉`
+      `==[🏦 𝗥𝗢𝗦𝗔 𝗕𝗔𝗡𝗞 🏦]==\n━━━━━━━━━━━━━━━━\n✧ Congratulations! You've won ${winnings}$! 🎉`
     );
   } else {
     // Si l'utilisateur perd, on déduit le montant du pari
@@ -165,7 +165,7 @@ module.exports = {
     });
     fs.writeFileSync("./bank.json", JSON.stringify(bankData));
     return message.reply(
-      `==[🏦 𝐔𝐂𝐇𝐈𝐖𝐀 𝐁𝐀𝐍𝐊 🏦]==\n━━━━━━━━━━━━━━━━\n✧ Oh no! You've lost ${betAmount}$ in the gamble. 😢`
+      `==[🏦 𝗥𝗢𝗦𝗔 𝗕𝗔𝗡𝗞 🏦]==\n━━━━━━━━━━━━━━━━\n✧ Oh no! You've lost ${betAmount}$ in the gamble. 😢`
     );
   }
         case "heist":
@@ -179,16 +179,16 @@ module.exports = {
     const winnings = heistWinAmount;
     bankData[user].bank += winnings;
     fs.writeFileSync("./bank.json", JSON.stringify(bankData));
-    return message.reply(`==[🏦 𝐔𝐂𝐇𝐈𝐖𝐀 𝐁𝐀𝐍𝐊 🏦]==\n━━━━━━━━━━━━━━━━\n✧Bank heist successful! You've won ${winnings}$! 💰`);
+    return message.reply(`==[🏦 𝗥𝗢𝗦𝗔 𝗕𝗔𝗡𝗞 🏦]==\n━━━━━━━━━━━━━━━━\n✧Bank heist successful! You've won ${winnings}$! 💰`);
   } else {
     const lossAmount = heistLossAmount;
     bankData[user].bank -= lossAmount;
     fs.writeFileSync("./bank.json", JSON.stringify(bankData));
-    return message.reply(`==[🏦 𝐔𝐂𝐇𝐈𝐖𝐀 𝐁𝐀𝐍𝐊 🏦]==\n━━━━━━━━━━━━━━━━\n✧Bank heist failed! You've lost ${lossAmount}$! 😔`);
+    return message.reply(`==[🏦 𝗥𝗢𝗦𝗔 𝗕𝗔𝗡𝗞 🏦]==\n━━━━━━━━━━━━━━━━\n✧Bank heist failed! You've lost ${lossAmount}$! 😔`);
   }
       case "show":
         const bankBalance = bankData[user].bank !== undefined && !isNaN(bankData[user].bank) ? bankData[user].bank : 0;
-        return message.reply(`==[🏦 𝐔𝐂𝐇𝐈𝐖𝐀 𝐁𝐀𝐍𝐊 🏦]==\n━━━━━━━━━━━━━━━━\n✧Your bank balance is: ${bankBalance}$ •\n✧To withdraw money.\n type:\n${p}Bank Withdraw 'your withdrawal amount'•\n✧To earn interest\ntype:\n${p}Bank Interest•`);
+        return message.reply(`==[🏦 𝗥𝗢𝗦𝗔 𝗕𝗔𝗡𝗞 🏦]==\n━━━━━━━━━━━━━━━━\n✧Your bank balance is: ${bankBalance}$ •\n✧To withdraw money.\n type:\n${p}Bank Withdraw 'your withdrawal amount'•\n✧To earn interest\ntype:\n${p}Bank Interest•`);
 
       case "interest":
         const interestRate = 0.001; 
@@ -197,7 +197,7 @@ module.exports = {
         const timeDiffInSeconds = (currentTime - lastInterestClaimed) / 1000;
         const interestEarned = bankData[user].bank * (interestRate / 970) * timeDiffInSeconds;
         if (bankData[user].bank <= 0) {
-    return message.reply("==[🏦 𝐔𝐂𝐇𝐈𝐖𝐀 𝐁𝐀𝐍𝐊 🏦]==\n━━━━━━━━━━━━━━━━\n✧You don't have any money in your bank account to earn interest.💸🤠");
+    return message.reply("==[🏦 𝗥𝗢𝗦𝗔 𝗕𝗔𝗡𝗞 🏦]==\n━━━━━━━━━━━━━━━━\n✧You don't have any money in your bank account to earn interest.💸🤠");
         }
 
         bankData[user].lastInterestClaimed = currentTime;
@@ -205,7 +205,7 @@ module.exports = {
 
         fs.writeFileSync("./bank.json", JSON.stringify(bankData));
 
-        return message.reply(`==[🏦 𝐔𝐂𝐇𝐈𝐖𝐀 𝐁𝐀𝐍𝐊 🏦]==\n━━━━━━━━━━━━━━━━\n✧You have earned interest of ${interestEarned.toFixed(2)} $ . It has been successfully added to your account balance..✅`);
+        return message.reply(`==[🏦 𝗥𝗢𝗦𝗔 𝗕𝗔𝗡𝗞 🏦]==\n━━━━━━━━━━━━━━━━\n✧You have earned interest of ${interestEarned.toFixed(2)} $ . It has been successfully added to your account balance..✅`);
 
     case "transfer":
     // Vérifie si l'utilisateur a un solde bancaire défini
@@ -214,28 +214,28 @@ module.exports = {
     // Vérifie si le montant est valide
     if (isNaN(amount) || amount <= 0) {
         return message.reply(
-            "==[🏦 𝐔𝐂𝐇𝐈𝐖𝐀 𝐁𝐀𝐍𝐊 🏦]==\n━━━━━━━━━━━━━━━━\n✧ Please enter a valid amount greater than 0 for the transfer. ♻"
+            "==[🏦 𝗥𝗢𝗦𝗔 𝗕𝗔𝗡𝗞 🏦]==\n━━━━━━━━━━━━━━━━\n✧ Please enter a valid amount greater than 0 for the transfer. ♻"
         );
     }
 
     // Vérifie si le solde est suffisant
     if (senderBalance < amount) {
         return message.reply(
-            "==[🏦 𝐔𝐂𝐇𝐈𝐖𝐀 𝐁𝐀𝐍𝐊 🏦]==\n━━━━━━━━━━━━━━━━\n✧ Insufficient funds in your bank account to complete this transfer. ✖"
+            "==[🏦 𝗥𝗢𝗦𝗔 𝗕𝗔𝗡𝗞 🏦]==\n━━━━━━━━━━━━━━━━\n✧ Insufficient funds in your bank account to complete this transfer. ✖"
         );
     }
 
     // Vérifie si l'UID du destinataire est valide
     if (isNaN(recipientUID) || recipientUID <= 0) {
         return message.reply(
-            `==[🏦 𝐔𝐂𝐇𝐈𝐖𝐀 𝐁𝐀𝐍𝐊 🏦]==\n━━━━━━━━━━━━━━━━\n✧ Please provide a valid recipient ID (UID).\nExample:\n${p}bank transfer 5000 123456789`
+            `==[🏦 𝗥𝗢𝗦𝗔 𝗕𝗔𝗡𝗞 🏦]==\n━━━━━━━━━━━━━━━━\n✧ Please provide a valid recipient ID (UID).\nExample:\n${p}bank transfer 5000 123456789`
         );
     }
 
     // Vérifie si l'utilisateur essaie de se transférer de l'argent à lui-même
     if (recipientUID === user) {
         return message.reply(
-            "==[🏦 𝐔𝐂𝐇𝐈𝐖𝐀 𝐁𝐀𝐍𝐊 🏦]==\n━━━━━━━━━━━━━━━━\n✧ You cannot transfer money to yourself. 🔄"
+            "==[🏦 𝗥𝗢𝗦𝗔 𝗕𝗔𝗡𝗞 🏦]==\n━━━━━━━━━━━━━━━━\n✧ You cannot transfer money to yourself. 🔄"
         );
     }
 
@@ -267,7 +267,7 @@ module.exports = {
     }
 
     // Envoie une notification au destinataire
-    const recipientMessage = `==[🏦 𝐔𝐂𝐇𝐈𝐖𝐀 𝐁𝐀𝐍𝐊 🏦]==\n━━━━━━━━━━━━━━━━\n✧ You have received ${amount}$ from:\n✧ Name: ${username}\n✧ BankID: ${user}\nYour current bank balance: ${bankData[recipientUID].bank}$\n\n~ NEMO Database ✅`;
+    const recipientMessage = `==[🏦 𝗥𝗢𝗦𝗔 𝗕𝗔𝗡𝗞 🏦]==\n━━━━━━━━━━━━━━━━\n✧ You have received ${amount}$ from:\n✧ Name: ${username}\n✧ BankID: ${user}\nYour current bank balance: ${bankData[recipientUID].bank}$\n\n~ NEMO Database ✅`;
     try {
         await api.sendMessage(recipientMessage, recipientUID);
     } catch (error) {
@@ -276,13 +276,13 @@ module.exports = {
 
     // Confirme le transfert à l'expéditeur
     return message.reply(
-        `==[🏦 𝐔𝐂𝐇𝐈𝐖𝐀 𝐁𝐀𝐍𝐊 🏦]==\n━━━━━━━━━━━━━━━━\n✧ Successfully transferred ${amount}$ to:\n✧ Name: ${recipientName}\n✧ BankID: ${recipientUID}\n\n~ SHISUI Database ✅` );
+        `==[🏦 𝗥𝗢𝗦𝗔 𝗕𝗔𝗡𝗞 🏦]==\n━━━━━━━━━━━━━━━━\n✧ Successfully transferred ${amount}$ to:\n✧ Name: ${recipientName}\n✧ BankID: ${recipientUID}\n\n~ SHISUI Database ✅` );
 
    case "balance":
   // Vérifier si l'utilisateur a un compte bancaire initialisé
   if (!bankData[user]) {
     return message.reply(
-      "==[🏦 𝐔𝐂𝐇𝐈𝐖𝐀 𝐁𝐀𝐍𝐊 🏦]==\n━━━━━━━━━━━━━━━━\n✧ You do not have a bank account. Please create one by performing a transaction like 'deposit'."
+      "==[🏦 𝗥𝗢𝗦𝗔 𝗕𝗔𝗡𝗞 🏦]==\n━━━━━━━━━━━━━━━━\n✧ You do not have a bank account. Please create one by performing a transaction like 'deposit'."
     );
   }
 
@@ -291,7 +291,7 @@ module.exports = {
 
   // Répondre avec le solde actuel
   return message.reply(
-    `==[🏦 𝐔𝐂𝐇𝐈𝐖𝐀 𝐁𝐀𝐍𝐊 🏦]==\n━━━━━━━━━━━━━━━━\n✧ Your current bank balance is: ${userBankBalance}$.\n✧ To deposit money, use:\n${p}bank deposit [amount]\n✧ To withdraw money, use:\n${p}bank withdraw [amount]\n━━━━━━━━━━━━━━━━`
+    `==[🏦 𝗥𝗢𝗦𝗔 𝗕𝗔𝗡𝗞 🏦]==\n━━━━━━━━━━━━━━━━\n✧ Your current bank balance is: ${userBankBalance}$.\n✧ To deposit money, use:\n${p}bank deposit [amount]\n✧ To withdraw money, use:\n${p}bank withdraw [amount]\n━━━━━━━━━━━━━━━━`
   );
 
       case "top":
@@ -306,39 +306,39 @@ module.exports = {
           return `[${index + 1}. ${userName}]`;
         }))).join('\n');
 
-        return message.reply("𝐑𝐢𝐜𝐡𝐞𝐬𝐭 𝐩𝐞𝐨𝐩𝐥𝐞 𝐢𝐧 𝐭𝐡𝐞 𝐔𝐂𝐇𝐈𝐖𝐀 𝐬𝐲𝐬𝐭𝐞𝐦👑🤴:\n" + output);
+        return message.reply("𝐑𝐢𝐜𝐡𝐞𝐬𝐭 𝐩𝐞𝐨𝐩𝐥𝐞 𝐢𝐧 𝐭𝐡𝐞 𝗥𝗢𝗦𝗔 𝗕𝗔𝗡𝗞 𝐬𝐲𝐬𝐭𝐞𝐦👑🤴:\n" + output);
 
         case "setpassword":
   const newPassword = args[1];
   if (!newPassword) {
-    return message.reply("==[🏦 𝐔𝐂𝐇𝐈𝐖𝐀 𝐁𝐀𝐍𝐊 🏦]==\n━━━━━━━━━━━━━━━━\n✧Please provide a new password to set.🔑");
+    return message.reply("==[🏦 𝗥𝗢𝗦𝗔 𝗕𝗔𝗡𝗞 🏦]==\n━━━━━━━━━━━━━━━━\n✧Please provide a new password to set.🔑");
   }
   bankData[user].password = newPassword;
   fs.writeFileSync("./bank.json", JSON.stringify(bankData));
-  return message.reply("[🏦 𝐔𝐂𝐇𝐈𝐖𝐀 𝐁𝐀𝐍𝐊 🏦]\n━━━━━━━━━━━━━━━━\n✧Your password has been set successfully.🔑");
+  return message.reply("[🏦 𝗥𝗢𝗦𝗔 𝗕𝗔𝗡𝗞 🏦]\n━━━━━━━━━━━━━━━━\n✧Your password has been set successfully.🔑");
 
 case "changepassword":
   const currentPassword = args[1];
   const newPwd = args[2]; 
 
   if (!currentPassword || !newPwd) {
-    return message.reply("==[🏦 𝐔𝐂𝐇𝐈𝐖𝐀 𝐁𝐀𝐍𝐊 🏦]==\n━━━━━━━━━━━━━━━━\n✧Please provide your current password and a new password to change.🔑");
+    return message.reply("==[🏦 𝗥𝗢𝗦𝗔 𝗕𝗔𝗡𝗞 🏦]==\n━━━━━━━━━━━━━━━━\n✧Please provide your current password and a new password to change.🔑");
   }
 
   if (bankData[user].password !== currentPassword) {
-    return message.reply("==[🏦 𝐔𝐂𝐇𝐈𝐖𝐀 𝐁𝐀𝐍𝐊 🏦]==\n━━━━━━━━━━━━━━━━\n✧Incorrect current password. Please try again.🔑");
+    return message.reply("==[🏦 𝗥𝗢𝗦𝗔 𝗕𝗔𝗡𝗞 🏦]==\n━━━━━━━━━━━━━━━━\n✧Incorrect current password. Please try again.🔑");
   }
   bankData[user].password = newPwd; 
   feFileSync  ("./bank.json", JSON.stringify(bankData));
-  return message.reply("==[🏦 𝐔𝐂𝐇𝐈𝐖𝐀 𝐁𝐀𝐍𝐊 🏦]==\n━━━━━━━━━━━━━━━━\n✧Your password has been changed successfully.🔑");
+  return message.reply("==[🏦 𝗥𝗢𝗦𝗔 𝗕𝗔𝗡𝗞 🏦]==\n━━━━━━━━━━━━━━━━\n✧Your password has been changed successfully.🔑");
 
 case "removepassword":
   if (!bankData[user].password) {
-    return message.reply("==[🏦 𝐔𝐂𝐇𝐈𝐖𝐀 𝐁𝐀𝐍𝐊 🏦]==\n━━━━━━━━━━━━━━━━\n✧You do not have a password set for your account.🔒");
+    return message.reply("==[🏦 𝗥𝗢𝗦𝗔 𝗕𝗔𝗡𝗞 🏦]==\n━━━━━━━━━━━━━━━━\n✧You do not have a password set for your account.🔒");
   }
   bankData[user].password = null;
   fs.writeFileSync("./bank.json", JSON.stringify(bankData));
-  return message.reply("==[🏦 𝐔𝐂𝐇𝐈𝐖𝐀 𝐁𝐀𝐍𝐊 🏦]==\n━━━━━━━━━━━━━━━━\n✧Your password has been removed successfully.🔒");
+  return message.reply("==[🏦 𝗥𝗢𝗦𝗔 𝗕𝗔𝗡𝗞 🏦]==\n━━━━━━━━━━━━━━━━\n✧Your password has been removed successfully.🔒");
 
 
 case "loan":
@@ -347,15 +347,15 @@ case "loan":
   const loanPayed = bankData[user].loanPayed !== undefined ? bankData[user].loanPayed : true;
 
   if (!amount) {
-    return message.reply("==[🏦 𝐔𝐂𝐇𝐈𝐖𝐀 𝐁𝐀𝐍𝐊 🏦]==\n━━━━━━━━━━━━━━━━\n✧Please enter a valid loan amount..❗");
+    return message.reply("==[🏦 𝗥𝗢𝗦𝗔 𝗕𝗔𝗡𝗞 🏦]==\n━━━━━━━━━━━━━━━━\n✧Please enter a valid loan amount..❗");
   }
 
   if (amount > maxLoanAmount) {
-    return message.reply("==[🏦 𝐔𝐂𝐇𝐈𝐖𝐀 𝐁𝐀𝐍𝐊 🏦]==\n━━━━━━━━━━━━━━━━\n✧The maximum loan amount is 10000 ‼");
+    return message.reply("==[🏦 𝗥𝗢𝗦𝗔 𝗕𝗔𝗡𝗞 🏦]==\n━━━━━━━━━━━━━━━━\n✧The maximum loan amount is 10000 ‼");
   }
 
   if (!loanPayed && userLoan > 0) {
-    return message.reply(`==[🏦 𝐔𝐂𝐇𝐈𝐖𝐀 𝐁𝐀𝐍𝐊 🏦]==\n━━━━━━━━━━━━━━━━\n✧You cannot take a new loan until you pay off your current loan..🌚\nYour current loan to pay: ${userLoan}$`);
+    return message.reply(`==[🏦 𝗥𝗢𝗦𝗔 𝗕𝗔𝗡𝗞 🏦]==\n━━━━━━━━━━━━━━━━\n✧You cannot take a new loan until you pay off your current loan..🌚\nYour current loan to pay: ${userLoan}$`);
   }
 
   bankData[user].loan = userLoan + amount;
@@ -364,7 +364,7 @@ case "loan":
 
   fs.writeFileSync("./bank.json", JSON.stringify(bankData));
 
-  return message.reply(`==[🏦 𝐔𝐂𝐇𝐈𝐖𝐀 𝐁𝐀𝐍𝐊 🏦]==\n━━━━━━━━━━━━━━━━\n✧You have successfully taken a loan of ${amount}$. Please note that loans must be repaid within a certain period.😉`);
+  return message.reply(`==[🏦 𝗥𝗢𝗦𝗔 𝗕𝗔𝗡𝗞 🏦]==\n━━━━━━━━━━━━━━━━\n✧You have successfully taken a loan of ${amount}$. Please note that loans must be repaid within a certain period.😉`);
 
           case "vip":
   // Vérifie si l'utilisateur est déjà VIP
@@ -390,19 +390,19 @@ case "loan":
   const loanBalance = bankData[user].loan || 0;
 
   if (isNaN(amount) || amount <= 0) {
-    return message.reply("==[🏦 𝐔𝐂𝐇𝐈𝐖𝐀 𝐁𝐀𝐍𝐊 🏦]==\n━━━━━━━━━━━━━━━━\n✧Please enter a valid amount to repay your loan..❗");
+    return message.reply("==[🏦 𝗥𝗢𝗦𝗔 𝗕𝗔𝗡𝗞 🏦]==\n━━━━━━━━━━━━━━━━\n✧Please enter a valid amount to repay your loan..❗");
   }
 
   if (loanBalance <= 0) {
-    return message.reply("==[🏦 𝐔𝐂𝐇𝐈𝐖𝐀 𝐁𝐀𝐍𝐊 🏦]==\n━━━━━━━━━━━━━━━━\n✧You don't have any pending loan payments.😄");
+    return message.reply("==[🏦 𝗥𝗢𝗦𝗔 𝗕𝗔𝗡𝗞 🏦]==\n━━━━━━━━━━━━━━━━\n✧You don't have any pending loan payments.😄");
   }
 
   if (amount > loanBalance) {
-    return message.reply(`==[🏦 𝐔𝐂𝐇𝐈𝐖𝐀 𝐁𝐀𝐍𝐊 🏦]==\n━━━━━━━━━━━━━━━━\n✧The amount required to pay off the loan is greater than your due amount. Please pay the exact amount.😊\nYour total loan: ${loanBalance}$`);
+    return message.reply(`==[🏦 𝗥𝗢𝗦𝗔 𝗕𝗔𝗡𝗞 🏦]==\n━━━━━━━━━━━━━━━━\n✧The amount required to pay off the loan is greater than your due amount. Please pay the exact amount.😊\nYour total loan: ${loanBalance}$`);
   }
 
   if (amount > userMoney) {
-    return message.reply(`[🏦 ==[🏦 𝐔𝐂𝐇𝐈𝐖𝐀 𝐁𝐀𝐍𝐊 🏦]==\n━━━━━━━━━━━━━━━━\n✧You do not have ${amount}$ in your balance to repay the loan.❌\nType ${p}bal\nto view your current main balance..😞`);
+    return message.reply(`[🏦 ==[🏦 𝗥𝗢𝗦𝗔 𝗕𝗔𝗡𝗞 🏦]==\n━━━━━━━━━━━━━━━━\n✧You do not have ${amount}$ in your balance to repay the loan.❌\nType ${p}bal\nto view your current main balance..😞`);
   }
 
   bankData[user].loan = loanBalance - amount;
@@ -418,11 +418,11 @@ case "loan":
 
   fs.writeFileSync("./bank.json", JSON.stringify(bankData));
 
-  return message.reply(`==[🏦 𝐔𝐂𝐇𝐈𝐖𝐀 𝐁𝐀𝐍𝐊 🏦]==\n━━━━━━━━━━━━━━━━\n✧Successfully repaid ${amount}$ towards your loan.✅\n\nto check type:\n${p}bank balance\n\nAnd your current loan to pay: ${bankData[user].loan}$`);
+  return message.reply(`==[🏦 𝗥𝗢𝗦𝗔 𝗕𝗔𝗡𝗞 🏦]==\n━━━━━━━━━━━━━━━━\n✧Successfully repaid ${amount}$ towards your loan.✅\n\nto check type:\n${p}bank balance\n\nAnd your current loan to pay: ${bankData[user].loan}$`);
 
 
 default:
-        return message.reply(`==[🏦 𝐔𝐂𝐇𝐈𝐖𝐀 𝐁𝐀𝐍𝐊 🏦]==\n━━━━━━━━━━━━━━━\n📲| 𝙿𝚕𝚎𝚊𝚜𝚎 𝚞𝚜𝚎 𝚘𝚗𝚎 𝚘𝚏 𝚝𝚑𝚎 𝚏𝚘𝚕𝚕𝚘𝚠𝚒𝚗𝚐 𝚌𝚘𝚖𝚖𝚊𝚗𝚍𝚜✧\n✰ ${p}𝐁𝐚𝐧𝐤 𝐃𝐞𝐩𝐨𝐬𝐢𝐭\n✰ ${p}𝐁𝐚𝐧𝐤 𝐖𝐢𝐭𝐡𝐝𝐫𝐚𝐰\n✰ ${p}𝐁𝐚𝐧𝐤 𝐒𝐡𝐨𝐰\n✰ ${p}𝐁𝐚𝐧𝐤 𝐈𝐧𝐭𝐞𝐫𝐞𝐬𝐭\n✰ ${p}𝐁𝐚𝐧𝐤 𝐓𝐫𝐚𝐧𝐬𝐟𝐞𝐫\n✰ ${p}𝐁𝐚𝐧𝐤 𝐓𝐨𝐩\n✰ ${p}𝐁𝐚𝐧𝐤 𝐋𝐨𝐚𝐧\n✰ ${p}𝐁𝐚𝐧𝐤 𝐏𝐚𝐲𝐥𝐨𝐚𝐧\n✰ ${p}𝐁𝐚𝐧𝐤 𝐇𝐫𝐢𝐧𝐯𝐞𝐬𝐭\n✰ ${p}𝐁𝐚𝐧𝐤 𝐆𝐚𝐦𝐛𝐥𝐞\n✰ ${p}𝐁𝐚𝐧𝐤 𝐇𝐞𝐢𝐬𝐭\n✰ ${p}𝐁𝐚𝐧𝐤 𝐁𝐚𝐥𝐚𝐧𝐜𝐞\n✰ ${p}𝐁𝐚𝐧𝐤 𝐕𝐈𝐏\n━━━━━━━━━━━━━━━━\n ===[🏦 𝗣𝗔𝗦𝗦𝗪𝗢𝗥𝗗 🏦]===\n✧𝙿𝚕𝚎𝚊𝚜𝚎 𝚊𝚍𝚍 𝚙𝚊𝚜𝚜𝚠𝚘𝚛𝚍 𝚏𝚘𝚛 𝚜𝚎𝚌𝚞𝚛𝚎 𝚊𝚌𝚌𝚘𝚞𝚗𝚝✧\n✰ ${p}𝗕𝗮𝗻𝗸 𝘀𝗲𝘁𝗽𝗮𝘀𝘀𝘄𝗼𝗿𝗱\n✰ ${p}𝗕𝗮𝗻𝗸 𝗰𝗵𝗮𝗻𝗴𝗲𝗽𝗮𝘀𝘀𝘄𝗼𝗿𝗱\n✰ ${p}𝗕𝗮𝗻𝗸 𝗿𝗲𝗺𝗼𝘃𝗲𝗽𝗮𝘀𝘀𝘄𝗼𝗿𝗱\n━━━━━━━━━━━━━━━━`);
+        return message.reply(`==[🏦 𝗥𝗢𝗦𝗔 𝗕𝗔𝗡𝗞 🏦]==\n━━━━━━━━━━━━━━━\n📲| 𝙿𝚕𝚎𝚊𝚜𝚎 𝚞𝚜𝚎 𝚘𝚗𝚎 𝚘𝚏 𝚝𝚑𝚎 𝚏𝚘𝚕𝚕𝚘𝚠𝚒𝚗𝚐 𝚌𝚘𝚖𝚖𝚊𝚗𝚍𝚜✧\n✰ ${p}𝐁𝐚𝐧𝐤 𝐃𝐞𝐩𝐨𝐬𝐢𝐭\n✰ ${p}𝐁𝐚𝐧𝐤 𝐖𝐢𝐭𝐡𝐝𝐫𝐚𝐰\n✰ ${p}𝐁𝐚𝐧𝐤 𝐒𝐡𝐨𝐰\n✰ ${p}𝐁𝐚𝐧𝐤 𝐈𝐧𝐭𝐞𝐫𝐞𝐬𝐭\n✰ ${p}𝐁𝐚𝐧𝐤 𝐓𝐫𝐚𝐧𝐬𝐟𝐞𝐫\n✰ ${p}𝐁𝐚𝐧𝐤 𝐓𝐨𝐩\n✰ ${p}𝐁𝐚𝐧𝐤 𝐋𝐨𝐚𝐧\n✰ ${p}𝐁𝐚𝐧𝐤 𝐏𝐚𝐲𝐥𝐨𝐚𝐧\n✰ ${p}𝐁𝐚𝐧𝐤 𝐇𝐫𝐢𝐧𝐯𝐞𝐬𝐭\n✰ ${p}𝐁𝐚𝐧𝐤 𝐆𝐚𝐦𝐛𝐥𝐞\n✰ ${p}𝐁𝐚𝐧𝐤 𝐇𝐞𝐢𝐬𝐭\n✰ ${p}𝐁𝐚𝐧𝐤 𝐁𝐚𝐥𝐚𝐧𝐜𝐞\n✰ ${p}𝐁𝐚𝐧𝐤 𝐕𝐈𝐏\n━━━━━━━━━━━━━━━━\n ===[🏦 𝗣𝗔𝗦𝗦𝗪𝗢𝗥𝗗 🏦]===\n✧𝙿𝚕𝚎𝚊𝚜𝚎 𝚊𝚍𝚍 𝚙𝚊𝚜𝚜𝚠𝚘𝚛𝚍 𝚏𝚘𝚛 𝚜𝚎𝚌𝚞𝚛𝚎 𝚊𝚌𝚌𝚘𝚞𝚗𝚝✧\n✰ ${p}𝗕𝗮𝗻𝗸 𝘀𝗲𝘁𝗽𝗮𝘀𝘀𝘄𝗼𝗿𝗱\n✰ ${p}𝗕𝗮𝗻𝗸 𝗰𝗵𝗮𝗻𝗴𝗲𝗽𝗮𝘀𝘀𝘄𝗼𝗿𝗱\n✰ ${p}𝗕𝗮𝗻𝗸 𝗿𝗲𝗺𝗼𝘃𝗲𝗽𝗮𝘀𝘀𝘄𝗼𝗿𝗱\n━━━━━━━━━━━━━━━━`);
     }
   }
 };
